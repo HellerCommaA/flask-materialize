@@ -3,19 +3,43 @@
 {% import "material/fixes.html" as fixes %}
 {% import "material/utils.html" as util %}
 
+{% block title %}Home {% endblock %}
+
 {% block content %}
-{{util.flashed_messages()}}
+{# {{util.flashed_messages()}} #}
 <div class="container">
-  <h1>Hello, world!</h1>
-
-  <h2>This is the sample form (basic)</h2>
-  {{ wtf.quick_form(form, button_map={'submit_button': 'primary'}) }}
-
-  <h2>The same form, inline</h2>
-  {{ wtf.quick_form(form, form_type='inline', button_map={'submit_button': 'primary'}) }}
-
-  <h2>And as a horizontal form</h2>
-  {{ wtf.quick_form(form, form_type='horizontal', button_map={'submit_button': 'primary'})}}
+	<div class="row">
+		<form class="col s12">
+		  <div class="row">
+		    <div class="input-field col s6">
+		      <input placeholder="Placeholder" id="first_name" type="text" class="validate">
+		      <label for="first_name">First Name</label>
+		    </div>
+		    <div class="input-field col s6">
+		      <input id="last_name" type="text" class="validate">
+		      <label for="last_name">Last Name</label>
+		    </div>
+		  </div>
+		  <div class="row">
+		    <div class="input-field col s12">
+		      <input disabled value="I am not editable" id="disabled" type="text" class="validate">
+		      <label for="disabled">Disabled</label>
+		    </div>
+		  </div>
+		  <div class="row">
+		    <div class="input-field col s12">
+		      <input id="password" type="password" class="validate">
+		      <label for="password">Password</label>
+		    </div>
+		  </div>
+		  <div class="row">
+		    <div class="input-field col s12">
+		      <input id="email" type="email" class="validate">
+		      <label for="email">Email</label>
+		    </div>
+		  </div>
+		</form>
+	</div>
 </div>
 {% endblock %}
 

@@ -1,5 +1,5 @@
 from flask import Flask, render_template, flash
-from flask_bootstrap import Bootstrap
+from flask_material import Material
 from flask_appconfig import AppConfig
 from flask_wtf import Form, RecaptchaField
 from flask_wtf.file import FileField
@@ -50,7 +50,7 @@ def create_app(configfile=None):
     AppConfig(app, configfile)  # Flask-Appconfig is not necessary, but
                                 # highly recommend =)
                                 # https://github.com/mbr/flask-appconfig
-    Bootstrap(app)
+    Material(app)
 
     # in a real app, these should be configured through Flask-Appconfig
     app.config['SECRET_KEY'] = 'devkey'

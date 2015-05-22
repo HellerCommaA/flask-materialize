@@ -1,8 +1,8 @@
 import re
 
 from flask import Flask
-from flask_bootstrap import Bootstrap
-import flask_bootstrap
+from flask_material import Bootstrap
+import flask_material
 import requests
 
 import pytest
@@ -23,7 +23,7 @@ def client(app):
 @pytest.fixture
 def bsv():
     bootstrap_version = re.search(r'(\d+\.\d+\.\d+)',
-                                  str(flask_bootstrap.__version__)).group(1)
+                                  str(flask_material.__version__)).group(1)
     return bootstrap_version
 
 

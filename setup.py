@@ -8,16 +8,16 @@ def read(fname):
 
 
 setup(
-    name='Flask-Bootstrap',
-    version='3.3.4.2.dev1',
-    url='http://github.com/mbr/flask-bootstrap',
-    license='BSD',
-    author='Marc Brinkmann',
-    author_email='git@marcbrinkmann.de',
-    description='An extension that includes Bootstrap in your '
+    name='Flask-Material',
+    version='0.0.1dev',
+    url='https://github.com/HellerCommaA/flask-material',
+    license='MIT',
+    author='Adam Heller',
+    author_email='heller@mailbox.org',
+    description='An extension that includes Material CSS (http://materializecss.com/) in your '
                 'project, without any boilerplate code.',
     long_description=read('README.rst'),
-    packages=['flask_bootstrap'],
+    packages=['flask_material'],
     zip_safe=False,
     include_package_data=True,
     platforms='any',
@@ -31,7 +31,6 @@ setup(
         'Operating System :: OS Independent',
         'Programming Language :: Python',
         'Programming Language :: Python :: 2',
-        'Programming Language :: Python :: 3',
         'Topic :: Internet :: WWW/HTTP :: Dynamic Content',
         'Topic :: Software Development :: Libraries :: Python Modules'
     ]

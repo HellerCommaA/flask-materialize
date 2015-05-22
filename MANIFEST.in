@@ -1,0 +1,3 @@
+recursive-include flask_materialize/static *
+recursive-include flask_materialize/templates *.html
+include README.rst

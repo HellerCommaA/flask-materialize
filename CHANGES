@@ -1,0 +1,9 @@
+Flask-Bootstrap Changelog
+=========================
+
+The following changes are not fully backwards compatible:
+
+0.0.1dev
+-------
+
+* Initial Commit

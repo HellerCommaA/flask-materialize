@@ -3,6 +3,12 @@ Flask-Material Changelog
 
 The following changes are not fully backwards compatible:
 
+0.0.2
+-----
+* Initial public release
+* Bare minimum working version
+* TODO: Document all the things
+
 0.0.1dev
 -------
 

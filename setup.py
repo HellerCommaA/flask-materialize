@@ -16,7 +16,7 @@ setup(
     author_email='heller@mailbox.org',
     description='An extension that includes Material CSS (http://materializecss.com/) in your '
                 'project, without any boilerplate code.',
-    long_description=read('README.rst'),
+    long_description=read('README.md'),
     packages=['flask_material'],
     zip_safe=False,
     include_package_data=True,

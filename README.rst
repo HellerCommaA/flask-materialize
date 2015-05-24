@@ -2,6 +2,10 @@
 Flask-Material
 ===============
 
+.. image:: https://badges.gitter.im/Join%20Chat.svg
+   :alt: Join the chat at https://gitter.im/HellerCommaA/flask-material
+   :target: https://gitter.im/HellerCommaA/flask-material?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge
+
 
 Flask-Material packages `MaterializeCSS` <https://github.com/Dogfalo/materialize> into an extension that mostly consists
 of a blueprint named 'material'. It can also create links to serve Materialize

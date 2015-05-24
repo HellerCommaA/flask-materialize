@@ -1,10 +1,7 @@
 ===============
 Flask-Material
 ===============
-
-.. image:: https://badges.gitter.im/Join%20Chat.svg
-   :alt: Join the chat at https://gitter.im/HellerCommaA/flask-material
-   :target: https://gitter.im/HellerCommaA/flask-material?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge
+[![Join the chat at https://gitter.im/HellerCommaA/flask-material](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/HellerCommaA/flask-material?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
 [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/HellerCommaA/flask-material/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/HellerCommaA/flask-material/?branch=master)
 

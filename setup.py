@@ -9,7 +9,7 @@ def read(fname):
 
 setup(
     name='Flask-Material',
-    version='0.0.1dev',
+    version='0.0.2',
     url='https://github.com/HellerCommaA/flask-material',
     license='MIT',
     author='Adam Heller',
@@ -27,7 +27,7 @@ setup(
     classifiers=[
         'Environment :: Web Environment',
         'Intended Audience :: Developers',
-        'License :: OSI Approved :: BSD License',
+        'License :: OSI Approved :: MIT License',
         'Operating System :: OS Independent',
         'Programming Language :: Python',
         'Programming Language :: Python :: 2',

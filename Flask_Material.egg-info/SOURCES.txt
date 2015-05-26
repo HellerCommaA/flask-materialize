@@ -1,5 +1,5 @@
 MANIFEST.in
-README.md
+README.rst
 setup.py
 Flask_Material.egg-info/PKG-INFO
 Flask_Material.egg-info/SOURCES.txt

@@ -1,6 +1,6 @@
 Metadata-Version: 1.1
 Name: Flask-Material
-Version: 0.0.2
+Version: 0.0.2a0
 Summary: An extension that includes Material CSS (http://materializecss.com/) in your project, without any boilerplate code.
 Home-page: https://github.com/HellerCommaA/flask-material
 Author: Adam Heller
@@ -45,7 +45,7 @@ Description: ===============
 Platform: any
 Classifier: Environment :: Web Environment
 Classifier: Intended Audience :: Developers
-Classifier: License :: OSI Approved :: BSD License
+Classifier: License :: OSI Approved :: MIT License
 Classifier: Operating System :: OS Independent
 Classifier: Programming Language :: Python
 Classifier: Programming Language :: Python :: 2

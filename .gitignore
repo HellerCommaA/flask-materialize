@@ -2,4 +2,4 @@ lib/
 bin/
 local/
 *.pyc
-
+Flask_Material.egg-info/

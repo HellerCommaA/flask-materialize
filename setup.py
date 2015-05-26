@@ -9,14 +9,14 @@ def read(fname):
 
 setup(
     name='Flask-Material',
-    version='0.0.2',
+    version='0.0.2a',
     url='https://github.com/HellerCommaA/flask-material',
     license='MIT',
     author='Adam Heller',
     author_email='heller@mailbox.org',
     description='An extension that includes Material CSS (http://materializecss.com/) in your '
                 'project, without any boilerplate code.',
-    long_description=read('README.md'),
+    long_description=read('README.rst'),
     packages=['flask_material'],
     zip_safe=False,
     include_package_data=True,

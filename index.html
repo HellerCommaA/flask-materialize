@@ -1,0 +1,83 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Flask-material by HellerCommaA</title>
+
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/github-light.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1>Flask-material</h1>
+        <p>A Material Design framework, similar to flask-bootstrap</p>
+
+        <p class="view"><a href="https://github.com/HellerCommaA/flask-material">View the Project on GitHub <small>HellerCommaA/flask-material</small></a></p>
+
+
+        <ul>
+          <li><a href="https://github.com/HellerCommaA/flask-material/zipball/master">Download <strong>ZIP File</strong></a></li>
+          <li><a href="https://github.com/HellerCommaA/flask-material/tarball/master">Download <strong>TAR Ball</strong></a></li>
+          <li><a href="https://github.com/HellerCommaA/flask-material">View On <strong>GitHub</strong></a></li>
+        </ul>
+      </header>
+      <section>
+        <h1></h1>
+
+<h1>
+<a id="flask-material" class="anchor" href="#flask-material" aria-hidden="true"><span class="octicon octicon-link"></span></a>Flask-Material</h1>
+
+<p><a href="https://gitter.im/HellerCommaA/flask-material?utm_source=badge&amp;utm_medium=badge&amp;utm_campaign=pr-badge&amp;utm_content=badge"><img src="https://badges.gitter.im/Join%20Chat.svg" alt="Join the chat at https://gitter.im/HellerCommaA/flask-material"></a></p>
+
+<p><a href="https://scrutinizer-ci.com/g/HellerCommaA/flask-material/?branch=master"><img src="https://scrutinizer-ci.com/g/HellerCommaA/flask-material/badges/quality-score.png?b=master" alt="Scrutinizer Code Quality"></a></p>
+
+<p><a href="https://scrutinizer-ci.com/g/HellerCommaA/flask-material/build-status/master"><img src="https://scrutinizer-ci.com/g/HellerCommaA/flask-material/badges/build.png?b=master" alt="Build Status"></a></p>
+
+<p>Flask-Material packages <code>MaterializeCSS</code> <a href="https://github.com/Dogfalo/materialize">https://github.com/Dogfalo/materialize</a> into an extension that mostly consists
+of a blueprint named 'material'. It can also create links to serve Materialize
+from a CDN and works with no boilerplate code in your application.</p>
+
+<h2>
+<a id="usage" class="anchor" href="#usage" aria-hidden="true"><span class="octicon octicon-link"></span></a>Usage</h2>
+
+<p>Here is an example::</p>
+
+<p>from flask_material import Material</p>
+
+<p>[...]</p>
+
+<p>Material(app)</p>
+
+<p>This makes some new templates available, containing blank pages that include all
+bootstrap resources, and have predefined blocks where you can put your content.</p>
+
+<h2>
+<a id="availible-macros" class="anchor" href="#availible-macros" aria-hidden="true"><span class="octicon octicon-link"></span></a>Availible Macros</h2>
+
+<p>Be sure you are using <code>{% import "material/utils.html" as util %}</code> in your HTML document, then simply do: <code>{{util.icon('ICON-NAME-WITHOUT-MDI', ['SIZE', 'OPTIONAL-CSS-CLASSES'])}}</code></p>
+
+<h2>
+<a id="notes" class="anchor" href="#notes" aria-hidden="true"><span class="octicon octicon-link"></span></a>Notes</h2>
+
+<p>This is largely a fork from the excellent work at <a href="https://github.com/mbr/flask-bootstrap">https://github.com/mbr/flask-bootstrap</a></p>
+
+<h2>
+<a id="contributing" class="anchor" href="#contributing" aria-hidden="true"><span class="octicon octicon-link"></span></a>Contributing</h2>
+
+<p>PRs are welcome. Esspicially for documentation and implementation of the base components.</p>
+      </section>
+      <footer>
+        <p>This project is maintained by <a href="https://github.com/HellerCommaA">HellerCommaA</a></p>
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+      </footer>
+    </div>
+    <script src="javascripts/scale.fix.js"></script>
+    
+  </body>
+</html>

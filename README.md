@@ -25,6 +25,9 @@ Here is an example::
 This makes some new templates available, containing blank pages that include all
 bootstrap resources, and have predefined blocks where you can put your content.
 
+Availible Macros
+----------------
+Be sure you are using `{% import "material/utils.html" as util %}` in your HTML document, then simply do: `{{util.icon('ICON-NAME-WITHOUT-MDI', ['SIZE', 'OPTIONAL-CSS-CLASSES'])}}`
 
 Notes
 -----

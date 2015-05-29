@@ -34,12 +34,6 @@
 <i{{ ({'class': (['mdi-' + type] + extra_classes)|join(' ')})|xmlattr }}{{ kwargs|xmlattr}}></i>
 {%- endmacro %}
 
-{% macro form_button2() -%}
-THIS IS A TEST</br>
-{%- endmacro %}
-
-
-
-{% macro form_button(url, content, method='post', class='btn-link') -%}
-<form style="display: inline;" action='{{url}}' method='{{method}}'><button class="{{class|safe}}">{{content}}</button></form>
+{% macro form_button(content, class = [], type='submit', name='action', icon = False, iconclass=[]) -%}
+<button class="btn {{ class|join(' ') }}" type="{{type}}" name="{{name}}">{{content}} {% if icon %}<i class="{{ iconclass|join(' ') }} right"></i>{% endif %}</button>
 {%- endmacro %}

@@ -12,5 +12,6 @@ from sample_application import create_app
 
 # create an app instance
 app = create_app()
+app.config['MATERIAL_SERVE_LOCAL'] = True
 
 app.run(debug=True)

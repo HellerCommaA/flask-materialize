@@ -11,7 +11,8 @@
     {%- endblock metas %}
 
     {%- block styles %}
-    <!-- materialize -->
+    <!-- Materialize. Availible at https://github.com/Dogfalo/materialize -->
+    <!-- Flask-Materialize. Availible at https://github.com/HellerCommaA/flask-materialize -->
     <link href="{{material_find_resource('css/materialize.css', cdn='material')}}" rel="stylesheet" media="screen">
     {%- endblock styles %}
     {%- endblock head %}
@@ -24,7 +25,7 @@
     {%- endblock content %}
 
     {% block scripts %}
-    <script src="{{material_find_resource('jquery.js', cdn='jquery')}}"></script>
+    <script src="{{material_find_resource('js/jquery.js', cdn='jquery')}}"></script>
     <script src="{{material_find_resource('js/materialize.js', cdn='material')}}"></script>
     {%- endblock scripts %}
     {%- endblock body %}

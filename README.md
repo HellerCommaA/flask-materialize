@@ -1,7 +1,7 @@
 ===============
 Flask-Material
 ===============
-[![Join the chat at https://gitter.im/HellerCommaA/flask-material](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/HellerCommaA/flask-material?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+[![Join the chat at https://gitter.im/HellerCommaA/flask-materialize](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/HellerCommaA/flask-material?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
 [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/HellerCommaA/flask-material/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/HellerCommaA/flask-material/?branch=master)
 
@@ -27,7 +27,15 @@ bootstrap resources, and have predefined blocks where you can put your content.
 
 Availible Macros
 ----------------
-Be sure you are using `{% import "material/utils.html" as util %}` in your HTML document, then simply do: `{{util.icon('ICON-NAME-WITHOUT-MDI', ['SIZE', 'OPTIONAL-CSS-CLASSES'])}}`
+Be sure you are using `{% import "material/utils.html" as util %}` in your HTML document.
+*Icon*
+Simply do: `{{ util.icon('ICON-NAME-WITHOUT-MDI', ['SIZE', 'OPTIONAL-CSS-CLASSES']) }}`
+
+*Button*
+Macro prototype: `{{ form_button(content, class = [], type='submit', name='action', icon = False, iconclass=[] }}`
+**Note**
+Class already includes btn. Everything else must be added.
+`<button class="btn {{ class|join(' ') }}" type="{{type}}" name="{{name}}">{{content}} {% if icon %}<i class="{{ iconclass|join(' ') }} right"></i>{% endif %}</button>`
 
 Notes
 -----

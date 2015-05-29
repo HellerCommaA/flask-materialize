@@ -17,11 +17,11 @@ Usage
 
 Here is an example::
 
-  from flask_material import Material
+	from flask_material import Material
 
-  [...]
+	[...]
 
-  Material(app)
+	Material(app)
 
 This makes some new templates available, containing blank pages that include all
 Material resources, and have predefined blocks where you can put your content.
@@ -73,7 +73,4 @@ This is largely a fork from the excellent work at <https://github.com/mbr/flask-
 
 Contributing
 ----
-
-Clone this project   
-Make your changes   
-Submit PR   
+PRs are welcome. Esspicially for documentation and implementation of the base components.

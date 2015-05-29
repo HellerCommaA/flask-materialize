@@ -29,13 +29,19 @@ bootstrap resources, and have predefined blocks where you can put your content.
 Availible Macros
 ----------------
 Be sure you are using `{% import "material/utils.html" as util %}` in your HTML document.
+
 *Icon*
+
 Simply do: `{{ util.icon('ICON-NAME-WITHOUT-MDI', ['SIZE', 'OPTIONAL-CSS-CLASSES']) }}`
 
 *Button*
+
 Macro prototype: `{{ form_button(content, class = [], type='submit', name='action', icon = False, iconclass=[] }}`
+
 **Note**
+
 Class already includes btn. Everything else must be added.
+
 `<button class="btn {{ class|join(' ') }}" type="{{type}}" name="{{name}}">{{content}} {% if icon %}<i class="{{ iconclass|join(' ') }} right"></i>{% endif %}</button>`
 
 Notes

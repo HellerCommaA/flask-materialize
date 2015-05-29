@@ -23,23 +23,23 @@ def client(app):
 @pytest.fixture
 def bsv():
     material_version = re.search(r'(\d+\.\d+\.\d+)',
-                                  str(flask_material.__version__)).group(1)
+                                  str(flask_material.__material_version__)).group(1)
     return material_version
 
 
 def test_material_version_matches(app, client, bsv):
-    material_vre = re.compile(r'Bootstrap v(\d+\.\d+\.\d+).*')
+    material_vre = re.compile(r'Materialize v(\d+\.\d+\.\d+).*')
 
     # find local version
     local_version = material_vre.search(
-        str(client.get('/static/bootstrap/css/materialize.css').data)
+        str(client.get('/static/material/css/materialize.css').data)
     ).group(1)
 
     # find cdn version
-    cdn = app.extensions['bootstrap']['cdns']['bootstrap']
+    cdn = app.extensions['material']['cdns']['material']
     with app.app_context():
-        cdn_url = 'https:' + cdn.get_resource_url('css/bootstrap.css')
-    cdn_version = bootstrap_vre.search(requests.get(cdn_url).text).group(1)
+        cdn_url = 'https:' + cdn.get_resource_url('css/materialize.css')
+    cdn_version = material_vre.search(requests.get(cdn_url).text).group(1)
 
     # get package version
 

@@ -3,7 +3,6 @@ Flask-Material
 ===============
 
 [![Join the chat at https://gitter.im/HellerCommaA/flask-materialize](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/HellerCommaA/flask-materialize?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
->>>>>>> ed3d7ad4c7f0c721f63a14a4a2edea3508feedb8
 
 [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/HellerCommaA/flask-material/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/HellerCommaA/flask-material/?branch=master)
 

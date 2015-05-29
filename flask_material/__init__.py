@@ -92,6 +92,12 @@ def material_find_resource(filename, cdn, use_minified=None, local=True):
     """
     config = current_app.config
 
+    if config['MATERIAL_SERVE_LOCAL']:
+        if 'css/' not in filename and 'js/' not in filename:
+            print filename
+            print 'has no /js/'
+            filename = 'js/' + filename
+
     if None == use_minified:
         use_minified = config['MATERIAL_USE_MINIFIED']
 

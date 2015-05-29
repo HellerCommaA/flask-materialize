@@ -4,9 +4,9 @@ Flask-Material
 
 [![Join the chat at https://gitter.im/HellerCommaA/flask-materialize](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/HellerCommaA/flask-materialize?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
-[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/HellerCommaA/flask-material/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/HellerCommaA/flask-material/?branch=master)
+[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/HellerCommaA/flask-materialize/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/HellerCommaA/flask-materialize/?branch=master)
 
-[![Build Status](https://scrutinizer-ci.com/g/HellerCommaA/flask-material/badges/build.png?b=master)](https://scrutinizer-ci.com/g/HellerCommaA/flask-material/build-status/master)
+[![Build Status](https://scrutinizer-ci.com/g/HellerCommaA/flask-materialize/badges/build.png?b=master)](https://scrutinizer-ci.com/g/HellerCommaA/flask-materialize/build-status/master)
 
 Flask-Material packages `MaterializeCSS` <https://github.com/Dogfalo/materialize> into an extension that mostly consists
 of a blueprint named 'material'. It can also create links to serve Materialize
@@ -37,7 +37,7 @@ Starts: Inside the `<html>` tag
 Ends: Inside the `<html>` tag
 
 	{{block head}}
-Starts: Just after the `<head>` tag
+Starts: Just after the `<head>` tag  
 Ends: Just before the `</head>` tag
 
 	{{block title}}
@@ -57,18 +57,14 @@ Availible Macros
 ----------------
 Be sure you are using `{% import "material/utils.html" as util %}` in your HTML document.
 
-*Icon*
-
+*Icon*  
 Simply do: `{{ util.icon('ICON-NAME-WITHOUT-MDI', ['SIZE', 'OPTIONAL-CSS-CLASSES']) }}`
 
-*Button*
-
+*Button*  
 Macro prototype: `{{ form_button(content, class = [], type='submit', name='action', icon = False, iconclass=[] }}`
 
-**Note**
-
-Class already includes btn. Everything else must be added.
-
+**Note**  
+Class already includes btn. Everything else must be added.  
 `<button class="btn {{ class|join(' ') }}" type="{{type}}" name="{{name}}">{{content}} {% if icon %}<i class="{{ iconclass|join(' ') }} right"></i>{% endif %}</button>`
 
 Notes

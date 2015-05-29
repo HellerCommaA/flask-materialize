@@ -1,7 +1,7 @@
 import re
 
 from flask import Flask
-from flask_material import Bootstrap
+from flask_material import Material
 import flask_material
 import requests
 
@@ -11,7 +11,7 @@ import pytest
 @pytest.fixture
 def app():
     app = Flask(__name__)
-    Bootstrap(app)
+    Material(app)
     return app
 
 
@@ -22,17 +22,17 @@ def client(app):
 
 @pytest.fixture
 def bsv():
-    bootstrap_version = re.search(r'(\d+\.\d+\.\d+)',
+    material_version = re.search(r'(\d+\.\d+\.\d+)',
                                   str(flask_material.__version__)).group(1)
-    return bootstrap_version
+    return material_version
 
 
-def test_bootstrap_version_matches(app, client, bsv):
-    bootstrap_vre = re.compile(r'Bootstrap v(\d+\.\d+\.\d+).*')
+def test_material_version_matches(app, client, bsv):
+    material_vre = re.compile(r'Bootstrap v(\d+\.\d+\.\d+).*')
 
     # find local version
-    local_version = bootstrap_vre.search(
-        str(client.get('/static/bootstrap/css/bootstrap.css').data)
+    local_version = material_vre.search(
+        str(client.get('/static/bootstrap/css/materialize.css').data)
     ).group(1)
 
     # find cdn version

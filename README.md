@@ -73,4 +73,7 @@ This is largely a fork from the excellent work at <https://github.com/mbr/flask-
 
 Contributing
 ----
-PRs are welcome. Esspicially for documentation and implementation of the base components.
+
+Clone this project   
+Make your changes   
+Submit PR   

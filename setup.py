@@ -8,13 +8,13 @@ def read(fname):
 
 
 setup(
-    name='Flask-Material',
+    name='Flask-Materialize',
     version='0.0.4',
-    url='https://github.com/HellerCommaA/flask-material',
+    url='https://github.com/HellerCommaA/flask-materialize',
     license='MIT',
     author='Adam Heller',
     author_email='heller@mailbox.org',
-    description='An extension that includes Material CSS (http://materializecss.com/) in your '
+    description='An extension that includes Materialize CSS (http://materializecss.com/) in your '
                 'project, without any boilerplate code.',
     long_description=read('README.rst'),
     packages=['flask_material'],

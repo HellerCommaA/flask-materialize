@@ -1,0 +1,29 @@
+Metadata-Version: 1.1
+Name: Flask-Materialize
+Version: 0.0.4
+Summary: An extension that includes Materialize CSS (http://materializecss.com/) in your project, without any boilerplate code.
+Home-page: https://github.com/HellerCommaA/flask-materialize
+Author: Adam Heller
+Author-email: heller@mailbox.org
+License: MIT
+Description: ===============
+        Flask-Material
+        ===============
+        
+        Flask-Material packages `MaterializeCSS` <https://github.com/Dogfalo/materialize> into an extension that mostly consists
+        of a blueprint named 'material'. It can also create links to serve Materialize
+        from a CDN and works with no boilerplate code in your application.
+        
+        
+        Please see: `https://github.com/HellerCommaA/flask-material 
+        <https://github.com/HellerCommaA/flask-material>`_ for additional documentation.
+        
+Platform: any
+Classifier: Environment :: Web Environment
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 2
+Classifier: Topic :: Internet :: WWW/HTTP :: Dynamic Content
+Classifier: Topic :: Software Development :: Libraries :: Python Modules

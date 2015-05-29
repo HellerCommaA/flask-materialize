@@ -24,7 +24,34 @@ Here is an example::
   Material(app)
 
 This makes some new templates available, containing blank pages that include all
-bootstrap resources, and have predefined blocks where you can put your content.
+Material resources, and have predefined blocks where you can put your content.
+
+Availible Blocks
+----------------
+	{{block doc}}
+Starts: Above `<!DOCTYPE html>`  
+Ends: Below `</html>`
+
+	{{block html_attribs}}  
+Starts: Inside the `<html>` tag  
+Ends: Inside the `<html>` tag
+
+	{{block head}}
+Starts: Just after the `<head>` tag
+Ends: Just before the `</head>` tag
+
+	{{block title}}
+Starts: Just inside the `<title>` tag  
+Ends: Before `</title>` tag
+
+	{{block metas}}
+Starts: Inside the `<head>` block, after `</title>`. Automatically includes  
+`<meta name="viewport" content="width=device-width, initial-scale=1.0">` Be sure to call super() if you want this meta tag  
+Ends: Within `<head>` block, just before `{{block styles}}`
+
+	{{block styles}}
+Starts: Inside the head block, after the `metas` block closes. Includes a link to material.css be sure to call super()  
+Ends: Just before `</head>`
 
 Availible Macros
 ----------------

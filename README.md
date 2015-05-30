@@ -53,6 +53,19 @@ Ends: Within `<head>` block, just before `{{block styles}}`
 Starts: Inside the head block, after the `metas` block closes. Includes a link to material.css be sure to call super()  
 Ends: Just before `</head>`
 
+	{{block body_attribs}}
+Starts: Just after `<body`
+Ends: Just before `>` in the top `<body>` tag.  
+	`<body{% block body_attribs %}{% endblock body_attribs %}>`
+	
+	{{block body}}
+Starts: Immediately after `<body>`  
+Contains: 	`{{block navbar}}`  
+Contains: 	`{{block content}}`  
+Contains:	`{{block scripts`  **which includes materialize.js and jquery.js, *be sure to call super***  
+Ends: Just above `</body>`
+
+
 Availible Macros
 ----------------
 Be sure you are using `{% import "material/utils.html" as util %}` in your HTML document.

@@ -67,6 +67,10 @@ Macro prototype: `{{ form_button(content, class = [], type='submit', name='actio
 Class already includes btn. Everything else must be added.  
 `<button class="btn {{ class|join(' ') }}" type="{{type}}" name="{{name}}">{{content}} {% if icon %}<i class="{{ iconclass|join(' ') }} right"></i>{% endif %}</button>`
 
+*Card*  
+Card prototype: `{{ util.card('CARD-TITLE', 'CARD-CONTENT-CAN-USE-HTML-HERE', [['http://google.com/LINK.html', 'Link Title'], ['http://www.google.co.uk/link2.html', 'Link Title2']]) }}`  
+Card does not include any row, or column sizes. You must wrap the card in your desired size.
+
 Notes
 -----
 This is largely a fork from the excellent work at <https://github.com/mbr/flask-bootstrap>

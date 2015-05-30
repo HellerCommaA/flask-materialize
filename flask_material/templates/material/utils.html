@@ -37,3 +37,21 @@
 {% macro form_button(content, class = [], type='submit', name='action', icon = False, iconclass=[]) -%}
 <button class="btn {{ class|join(' ') }}" type="{{type}}" name="{{name}}">{{content}} {% if icon %}<i class="{{ iconclass|join(' ') }} right"></i>{% endif %}</button>
 {%- endmacro %}
+
+{% macro card(title, content, actions = []) %}
+<div class="card blue-grey darken-1">
+  <div class="card-content white-text">
+    <span class="card-title">{{ title }}</span>
+    {{ content|safe }}
+  </div>
+  {% if actions %}
+  <div class="card-action">
+  {% if actions %}
+    {% for each in actions %}
+      <a href="{{ each[0] }}">{{ each[1]|safe }}</a>
+    {% endfor %}
+  {% endif %}
+  </div>
+  {% endif %}
+</div>
+{% endmacro %}

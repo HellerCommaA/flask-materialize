@@ -61,11 +61,12 @@ Be sure you are using `{% import "material/utils.html" as util %}` in your HTML 
 Simply do: `{{ util.icon('ICON-NAME-WITHOUT-MDI', ['SIZE', 'OPTIONAL-CSS-CLASSES']) }}`
 
 *Button*  
-Macro prototype: `{{ form_button(content, class = [], type='submit', name='action', icon = False, iconclass=[] }}`
+Macro prototype: `{{ util.form_button(content, class = [], type='submit', name='action', icon = False, iconclass=[] }}`
 
-**Note**  
-Class already includes btn. Everything else must be added.  
-`<button class="btn {{ class|join(' ') }}" type="{{type}}" name="{{name}}">{{content}} {% if icon %}<i class="{{ iconclass|join(' ') }} right"></i>{% endif %}</button>`
+	**Note**  
+	Class already includes btn. Everything else must be added.  
+	<button class="btn {{ class|join(' ') }}" type="{{type}}" name="{{name}}">{{content}}
+	{% if icon %}<i class="{{ iconclass|join(' ') }} right"></i>{% endif %}</button>
 
 *Card*  
 Card prototype: `{{ util.card('CARD-TITLE', 'CARD-CONTENT-CAN-USE-HTML-HERE', [['http://google.com/LINK.html', 'Link Title'], ['http://www.google.co.uk/link2.html', 'Link Title2']]) }}`  
@@ -74,7 +75,3 @@ Card does not include any row, or column sizes. You must wrap the card in your d
 Notes
 -----
 This is largely a fork from the excellent work at <https://github.com/mbr/flask-bootstrap>
-
-Contributing
-----
-PRs are welcome. Esspicially for documentation and implementation of the base components.

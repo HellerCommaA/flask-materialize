@@ -15,13 +15,40 @@ from a CDN and works with no boilerplate code in your application.
 Usage
 -----
 
-Here is an example::
+A sample helloworld app:  
+**hello world.py**  
+```
+from flask import Flask, render_template  
+from flask_material import Material  
+app = Flask(__name__)  
+Material(app)  
+@app.route('/')  
+def hello_world():  
+      return render_template('test.html')  
 
-	from flask_material import Material
+if __name__ == '__main__':  
+	app.run()  
+```
 
-	[...]
+**test.html**
+```
+{% extends "material/base.html" %}
+{% import "material/wtf.html" as wtf %}
+{% import "material/fixes.html" as fixes %}
+{% import "material/utils.html" as util %}
 
-	Material(app)
+{% block title %}Hello, world!{% endblock %}
+
+{% block content %}
+<div class="container">
+        <div class="row">
+                <div class="col s12">
+                        {{ util.form_button('Hello world!', ['waves-effect', 'waves-light']) }}
+                </div>
+        </div>
+</div>
+{% endblock %}
+```
 
 This makes some new templates available, containing blank pages that include all
 Material resources, and have predefined blocks where you can put your content.
@@ -54,7 +81,7 @@ Starts: Inside the head block, after the `metas` block closes. Includes a link t
 Ends: Just before `</head>`
 
 	{{block body_attribs}}
-Starts: Just after `<body`
+Starts: Just after `<body`  
 Ends: Just before `>` in the top `<body>` tag.  
 	`<body{% block body_attribs %}{% endblock body_attribs %}>`
 	

@@ -2,12 +2,13 @@
 {% import "material/wtf.html" as wtf %}
 {% import "material/fixes.html" as fixes %}
 {% import "material/utils.html" as util %}
+{% from "material/rowscols.html" import * %}
 
 {% block title %}Home {% endblock %}
 
 {% block content %}
 {# {{util.flashed_messages()}} #}
-<div class="container">
+{{container()}}
 	<div class="row">
 		<div class="col s12 m6">
 		{{ util.card('Test Card', '<p>This is test content</p>',

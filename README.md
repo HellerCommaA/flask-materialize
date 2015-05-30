@@ -53,7 +53,7 @@ if __name__ == '__main__':
 This makes some new templates available, containing blank pages that include all
 Material resources, and have predefined blocks where you can put your content.
 
-Availible Blocks
+Available Blocks
 ----------------
 	{{block doc}}
 Starts: Above `<!DOCTYPE html>`  
@@ -93,7 +93,7 @@ Contains:	`{{block scripts`  **which includes materialize.js and jquery.js, *be 
 Ends: Just above `</body>`
 
 
-Availible Macros
+Available Macros
 ----------------
 Be sure you are using `{% import "material/utils.html" as util %}` in your HTML document.
 

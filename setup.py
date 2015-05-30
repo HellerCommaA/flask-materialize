@@ -8,7 +8,7 @@ def read(fname):
 
 
 setup(
-    name='Flask-Materialize',
+    name='Flask-Material',
     version='0.0.5',
     url='https://github.com/HellerCommaA/flask-materialize',
     license='MIT',

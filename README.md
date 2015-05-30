@@ -30,7 +30,7 @@ if __name__ == '__main__':
 	app.run()  
 ```
 
-**test.html**
+**templates/test.html**
 ```
 {% extends "material/base.html" %}
 {% import "material/wtf.html" as wtf %}

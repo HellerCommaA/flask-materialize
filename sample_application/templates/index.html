@@ -2,19 +2,18 @@
 {% import "material/wtf.html" as wtf %}
 {% import "material/fixes.html" as fixes %}
 {% import "material/utils.html" as util %}
-{% from "material/rowscols.html" import * %}
 
 {% block title %}Home {% endblock %}
 
 {% block content %}
 {# {{util.flashed_messages()}} #}
-{{container()}}
-	<div class="row">
-		<div class="col s12 m6">
+{{ container() }}
+	{{ row() }}
+		{{ col( ['s12', 'm12'] ) }}
 		{{ util.card('Test Card', '<p>This is test content</p>',
-			[['###', 'Test']]) }}
-		</div>
-	</div>
+			[['###', 'Test'], ['#', 'Test Two']]) }}
+		{{ enddiv() }}
+	{{ enddiv() }}
 	<div class="row">
 		<div class="col s12 m6">
 

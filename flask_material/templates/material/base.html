@@ -1,3 +1,11 @@
+{% macro row() %}<div class="row">{% endmacro %}
+
+{% macro container() %}<div class="container">{% endmacro %}
+
+{% macro col(cols=[]) %}<div class="col {{ cols|join(' ') }}">{% endmacro %}
+
+{% macro enddiv() %}</div>{% endmacro %}
+
 {% block doc -%}
 <!DOCTYPE html>
 <html{% block html_attribs %}{% endblock html_attribs %}>

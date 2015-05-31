@@ -39,9 +39,9 @@
 {%- endmacro %}
 
 {% macro card(title, content, actions = []) %}
-<div class="card blue-grey darken-1">
-  <div class="card-content white-text">
-    <span class="card-title">{{ title }}</span>
+<div class="card">
+  <div class="card-content">
+    <span class="card-title black-text">{{ title }}</span>
     {{ content|safe }}
   </div>
   {% if actions %}

@@ -30,7 +30,27 @@ if __name__ == '__main__':
 	app.run()  
 ```
 
-**templates/test.html**
+**templates/test.html with silly macros**
+```
+{% extends "material/base.html" %}
+{% import "material/wtf.html" as wtf %}
+{% import "material/fixes.html" as fixes %}
+{% import "material/utils.html" as util %}
+
+{% block title %}Hello, world!{% endblock %}
+
+{% block content %}
+{{ container() }}
+        {{ row() }}
+                {{ col(['s12']) }}
+                        {{ util.form_button('Hello world!', ['waves-effect', 'waves-light']) }}
+                {{ enddiv() }}
+        {{ enddiv() }}
+{{ enddiv() }}
+{% endblock %}
+```
+
+**OR templates/test.html without silly macros**
 ```
 {% extends "material/base.html" %}
 {% import "material/wtf.html" as wtf %}
@@ -110,7 +130,27 @@ Macro prototype: `{{ util.form_button(content, class = [], type='submit', name='
 
 *Card*  
 Card prototype: `{{ util.card('CARD-TITLE', 'CARD-CONTENT-CAN-USE-HTML-HERE', [['http://google.com/LINK.html', 'Link Title'], ['http://www.google.co.uk/link2.html', 'Link Title2']]) }}`  
-Card does not include any row, or column sizes. You must wrap the card in your desired size.
+Card does not include any row, or column sizes. You must wrap the card in your desired size.  
+
+----
+**These may or may not be useful, feedback requested. **  
+
+*Container*  
+`{{ container() }}` Generates `<div class="container">`
+
+*Row*  
+`{{ row() }}` Generates `<div class="row">`  
+
+*Col*  
+`{{ col( ['s12', 'm6'] ) }}` Generates `<div class="col s12 m6">`
+
+*Enddiv*  
+`{{ enddiv() }}` Generates `</div>`
+
+TODO
+----
+* Fix WTF forms integration (quick form)  
+* Finish documentation
 
 Notes
 -----

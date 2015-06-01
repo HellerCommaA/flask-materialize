@@ -1,5 +1,5 @@
 ===============
-Flask-Material
+Flask-Materialize
 ===============
 
 [![Join the chat at https://gitter.im/HellerCommaA/flask-materialize](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/HellerCommaA/flask-materialize?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
@@ -14,6 +14,8 @@ from a CDN and works with no boilerplate code in your application.
 
 Usage
 -----
+
+First, easily install the package with `pip install flask-material`
 
 A sample helloworld app:  
 **hello world.py**  

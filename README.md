@@ -111,7 +111,7 @@ Ends: Just before `>` in the top `<body>` tag.
 Starts: Immediately after `<body>`  
 Contains: 	`{{block navbar}}`  
 Contains: 	`{{block content}}`  
-Contains:	`{{block scripts`  **which includes materialize.js and jquery.js, *be sure to call super***  
+Contains:	`{{block scripts}}`  **which includes materialize.js and jquery.js, *be sure to call super***  
 Ends: Just above `</body>`
 
 

@@ -35,7 +35,8 @@ if __name__ == '__main__':
 **templates/test.html with silly macros**
 ```
 {% extends "material/base.html" %}
-{% import "material/wtf.html" as wtf %}
+{# {% import "material/wtf.html" as wtf %} #}
+{# Commented out till I can fix quick forms #}
 {% import "material/fixes.html" as fixes %}
 {% import "material/utils.html" as util %}
 
@@ -55,7 +56,8 @@ if __name__ == '__main__':
 **OR templates/test.html without silly macros**
 ```
 {% extends "material/base.html" %}
-{% import "material/wtf.html" as wtf %}
+{# {% import "material/wtf.html" as wtf %} #}
+{# Commented out till I can fix quick forms #}
 {% import "material/fixes.html" as fixes %}
 {% import "material/utils.html" as util %}
 

@@ -18,7 +18,7 @@ Usage
 First, easily install the package with `pip install flask-material`
 
 A sample helloworld app:  
-**hello world.py**  
+**hello_world.py**  
 ```
 from flask import Flask, render_template  
 from flask_material import Material  
@@ -76,6 +76,9 @@ if __name__ == '__main__':
 
 {% block content %}
 {{ container() }}
+		{{ row() }}
+			{{ wtf.quick_form(form) }}
+		{{ enddiv() }}
         {{ row() }}
                 {{ col(['s12']) }}
                         {{ util.form_button('Hello world!', ['waves-effect', 'waves-light']) }}

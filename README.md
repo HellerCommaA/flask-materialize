@@ -19,15 +19,26 @@ First, easily install the package with `pip install flask-material`
 
 A sample helloworld app:  
 **hello_world.py**  
+*Yes, I know this is a long helloworld, but, you'll have a great base to start with if you follow along!*  
 ```
 from flask import Flask, render_template  
 from flask_material import Material  
 from flask_wtf import Form, RecaptchaField
+from flask_wtf.file import FileField
 from wtforms import TextField, HiddenField, ValidationError, RadioField,\
-	BooleanField, SubmitField, IntegerField, FormField, validators
+    BooleanField, SubmitField, IntegerField, FormField, validators
+from wtforms.validators import Required
 
 app = Flask(__name__)  
 Material(app)  
+app.config['SECRET_KEY'] = 'USE-YOUR-OWN-SECRET-KEY-DAMNIT'
+app.config['RECAPTCHA_PUBLIC_KEY'] = 'TEST'
+
+# straight from the wtforms docs:
+class TelephoneForm(Form):
+    country_code = IntegerField('Country Code', [validators.required()])
+    area_code = IntegerField('Area Code/Exchange', [validators.required()])
+    number = TextField('Number')
 
 class ExampleForm(Form):
     field1 = TextField('First Field', description='This is field one.')
@@ -44,8 +55,8 @@ class ExampleForm(Form):
     checkbox_field = BooleanField('This is a checkbox',
                                   description='Checkboxes can be tricky.')
 
-	# subforms
-	mobile_phone = FormField(TelephoneForm)
+    # subforms
+    mobile_phone = FormField(TelephoneForm)
 
     # you can change the label as well
     office_phone = FormField(TelephoneForm, label='Your office phone')
@@ -60,29 +71,30 @@ class ExampleForm(Form):
 
 @app.route('/')  
 def hello_world():
-	  form = ExampleForm()   
+      form = ExampleForm()   
       return render_template('test.html', form = form)  
 
 if __name__ == '__main__':  
-	app.run()  
+    app.run(debug = True)  
 ```
 
 **templates/test.html with silly macros**
 ```
 {% extends "material/base.html" %}
 {% import "material/utils.html" as util %}
+{% import "material/wtf.html" as wtf %}
 
 {% block title %}Hello, world!{% endblock %}
 
 {% block content %}
 {{ container() }}
-		{{ row() }}
-			{{ wtf.quick_form(form) }}
-		{{ enddiv() }}
         {{ row() }}
-                {{ col(['s12']) }}
-                        {{ util.form_button('Hello world!', ['waves-effect', 'waves-light']) }}
+                {{ col(['s12', 'm6']) }}
+                	{{ util.card('Hello world!', wtf.quick_form(form) )}}
                 {{ enddiv() }}
+                {{ col(['s12', 'm6'])}}
+                	{{ util.card('Isn\'t Flask great?', '<p>I really do enjoy it!</p>', [['https://github.com/HellerCommaA', 'My Github']])}}
+            	{{ enddiv() }}
         {{ enddiv() }}
 {{ enddiv() }}
 {% endblock %}
@@ -92,15 +104,19 @@ if __name__ == '__main__':
 ```
 {% extends "material/base.html" %}
 {% import "material/utils.html" as util %}
+{% import "material/wtf.html" as wtf %}
 
 {% block title %}Hello, world!{% endblock %}
 
 {% block content %}
 <div class="container">
         <div class="row">
-                <div class="col s12">
-                        {{ util.form_button('Hello world!', ['waves-effect', 'waves-light']) }}
+                <div class="col s12 m6">
+                	{{ util.card('Hello world!', wtf.quick_form(form) )}}
                 </div>
+                <div class="col s12 m6">
+                	{{ util.card('Isn\'t Flask great?', '<p>I really do enjoy it!</p>', [['https://github.com/HellerCommaA', 'My Github']])}}
+            	</div>
         </div>
 </div>
 {% endblock %}

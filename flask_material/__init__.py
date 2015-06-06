@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # coding=utf8
 
-__app_version__ = '0.0.9'
+__app_version__ = '0.1.0'
 __material_version__ = '0.96.1'
 
 import re

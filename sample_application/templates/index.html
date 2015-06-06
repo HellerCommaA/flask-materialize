@@ -1,86 +1,18 @@
 {% extends "material/base.html" %}
-{% import "material/wtf.html" as wtf %}
-{% import "material/fixes.html" as fixes %}
 {% import "material/utils.html" as util %}
+{% import "material/wtf.html" as wtf %}
 
-{% block title %}Home {% endblock %}
+{% block title %}Hello, world!{% endblock %}
 
 {% block content %}
-{# {{util.flashed_messages()}} #}
 {{ container() }}
-	{{ row() }}
-		{{ col( ['s12', 'm12'] ) }}
-		{{ util.card('Test Card', '<p>This is test content</p>',
-			[['###', 'Test'], ['#', 'Test Two']]) }}
-		{{ enddiv() }}
-	{{ enddiv() }}
-	<div class="row">
-		<div class="col s12 m6">
-
-			<div class="card">
-	            <div class="card-content">
-	            	<span class="card-title black-text">Demo Icon macro test</span>
-	            	<p>{{util.icon('action-trending-up', ['medium'])}}<br>
-	            	{{ util.form_button('hi', class=['waves-effect']) }}</p>
-	            </div>
-	            <div class="card-action">
-	            	<a href="#">This is a link</a>
-	            	<a href='#'>This is a link</a>
-	            </div>
-         	</div>
-     	</div>
-     	<div class="col s12 m6">
-			<div class="card">
-	            <div class="card-content">
-	            	<span class="card-title black-text">Demo Icon macro test 2</span>
-	            	<p>{{util.icon('action-thumb-up', ['medium'])}}</p>
-	            </div>
-	            <div class="card-action">
-	            	<a href="#">This is a link</a>
-	            	<a href='#'>This is a link</a>
-	            </div>
-         	</div>
-     	</div>
- 	</div>
- 	<div class="row">
- 		{{ util.card('Test Form', wtf.quick_form(form)) }}
- 	</div>
- 	<div class="row">
-		<form class="col s12">
-		  <div class="row">
-		    <div class="input-field col s6">
-		      <input placeholder="Placeholder" id="first_name" type="text" class="validate">
-		      <label for="first_name">First Name</label>
-		    </div>
-		    <div class="input-field col s6">
-		      <input id="last_name" type="text" class="validate">
-		      <label for="last_name">Last Name</label>
-		    </div>
-		  </div>
-		  <div class="row">
-		    <div class="input-field col s12">
-		      <input disabled value="I am not editable" id="disabled" type="text" class="validate">
-		      <label for="disabled">Disabled</label>
-		    </div>
-		  </div>
-		  <div class="row">
-		    <div class="input-field col s12">
-		      <input id="password" type="password" class="validate">
-		      <label for="password">Password</label>
-		    </div>
-		  </div>
-		  <div class="row">
-		    <div class="input-field col s12">
-		      <input id="email" type="email" class="validate">
-		      <label for="email">Email</label>
-		    </div>
-		  </div>
-		</form>
-	</div>
-</div>
-{% endblock %}
-
-{% block head %}
-{{super()}}
-{{fixes.ie8()}}
+        {{ row() }}
+                {{ col(['s12', 'm6']) }}
+                	{{ util.card('Hello world!', wtf.quick_form(form) )}}
+                {{ enddiv() }}
+                {{ col(['s12', 'm6'])}}
+                	{{ util.card('Isn\'t Flask great?', '<p>I really do enjoy it!</p>', [['https://github.com/HellerCommaA', 'My Github']])}}
+            	{{ enddiv() }}
+        {{ enddiv() }}
+{{ enddiv() }}
 {% endblock %}

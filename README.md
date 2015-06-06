@@ -163,6 +163,7 @@ Contains: 	`{{block navbar}}`
 Contains: 	`{{block content}}`  
 Contains:	`{{block scripts}}`  **which includes materialize.js and jquery.js, *be sure to call super***  
 Ends: Just above `</body>`
+Contains: 	`{{block footer}}`
 
 
 Available Macros

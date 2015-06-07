@@ -12,6 +12,12 @@ Flask-Material packages `MaterializeCSS` <https://github.com/Dogfalo/materialize
 of a blueprint named 'material'. It can also create links to serve Materialize
 from a CDN and works with no boilerplate code in your application.
 
+
+Demo
+----
+A quick demo applicdation can be seen at http://flask-template-materia.elasticbeanstalk.com/  
+This demo is a clone of https://github.com/HellerCommaA/flask-template-materialize  
+
 Usage
 -----
 

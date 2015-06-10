@@ -9,7 +9,7 @@ def read(fname):
 
 setup(
     name='Flask-Material',
-    version='0.1.0',
+    version='0.1.1',
     url='https://github.com/HellerCommaA/flask-materialize',
     license='MIT',
     author='Adam Heller',

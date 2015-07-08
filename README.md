@@ -2,6 +2,9 @@
 Flask-Materialize
 ===============
 
+# **With the recent addition of Google's Material Design Lite, this project will soon be ported over to that framework and change names. <http://www.getmdl.io/> However, this project will be maintained in this repo and on PyPi. More updates will follow.**
+
+
 [![Join the chat at https://gitter.im/HellerCommaA/flask-materialize](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/HellerCommaA/flask-materialize?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
 [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/HellerCommaA/flask-materialize/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/HellerCommaA/flask-materialize/?branch=master)

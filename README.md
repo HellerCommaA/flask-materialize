@@ -29,7 +29,8 @@ First, easily install the package with `pip install flask-material`
 A sample helloworld app:  
 **hello_world.py**  
 *Yes, I know this is a long helloworld, but, you'll have a great base to start with if you follow along!*  
-```
+
+```python
 from flask import Flask, render_template  
 from flask_material import Material  
 from flask_wtf import Form, RecaptchaField
@@ -88,7 +89,8 @@ if __name__ == '__main__':
 ```
 
 **templates/test.html with silly macros**
-```
+
+```python
 {% extends "material/base.html" %}
 {% import "material/utils.html" as util %}
 {% import "material/wtf.html" as wtf %}
@@ -110,7 +112,8 @@ if __name__ == '__main__':
 ```
 
 **OR templates/test.html without silly macros**
-```
+
+```python
 {% extends "material/base.html" %}
 {% import "material/utils.html" as util %}
 {% import "material/wtf.html" as wtf %}
